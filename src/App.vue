@@ -1,29 +1,41 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div class="app">
+    <h2 class="mb-12">結帳</h2>
+    <div class="left">
+    </div>
+    <div class="right">
+      <ShopCart />
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ShopCart from './components/ShopCart.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
+    ShopCart,
   },
 }
 </script>
 
 <style lang="scss">
-@import './src/assets/scss/main.scss';
-
 body {
   font-family: 'Noto Sans TC';
 }
-#app {
+.app {
+  display: flex;
   max-width: 1440px;
   margin: 0 auto;
+  position: relative;
+}
+
+.left {
+  flex-grow: 1;
+}
+
+.right {
+  width: 50%;
 }
 </style>

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap');
 
 $body-bg: #ffffff;
 $bg-color: #2a2a2a;
@@ -12,7 +12,7 @@ $sizes: (
   25: 25%,
   50: 50%,
   75: 75%,
-  100: 100%
+  100: 100%,
 );
 
 html {
@@ -87,4 +87,30 @@ body {
 }
 .cursor-pointer {
   cursor: pointer;
+}
+
+/* margin */
+.m-4 {
+  margin: 1rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.mb-12 {
+  margin-bottom: 3rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
