@@ -3,6 +3,7 @@
     <h2 class="mb-12">結帳</h2>
     <div class="d-flex">
       <div class="left">
+        <Progress />
         <Button />
       </div>
       <div class="right">
@@ -15,13 +16,14 @@
 <script>
 import ShopCart from './components/ShopCart.vue'
 import Button from './components/Button.vue'
-
+import Progress from './components/Progress.vue'
 
 export default {
   name: 'App',
   components: {
     ShopCart,
     Button,
+    Progress,
   },
 }
 </script>

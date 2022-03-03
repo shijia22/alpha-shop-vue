@@ -106,12 +106,20 @@ body {
   margin-bottom: 3rem;
 }
 
+.mb-16 {
+  margin-bottom: 4rem;
+}
+
 .mt-4 {
   margin-top: 1rem;
 }
 
 .mt-6 {
   margin-top: 1.5rem;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
 }
 
 .my-4 {
@@ -122,4 +130,20 @@ body {
 /* padding */
 .pt-6 {
   padding-top: 1.5rem;
+}
+
+/* bord-bottom*/
+.line {
+  height: 1px;
+  width: 60px;
+  background-color: #000;
+}
+
+/* circle */
+.circle {
+  height: 24px;
+  width: 24px;
+  border: 1px solid $gray;
+  border-radius: 24px;
+  color: $gray;
 }
