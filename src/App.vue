@@ -1,9 +1,10 @@
 <template>
   <div class="app">
-    <h2 class="mb-12">結帳</h2>
+    <h1 class="mb-12">結帳</h1>
     <div class="d-flex">
       <div class="left">
         <Progress />
+        <FormAddress />
         <Button />
       </div>
       <div class="right">
@@ -17,6 +18,7 @@
 import ShopCart from './components/ShopCart.vue'
 import Button from './components/Button.vue'
 import Progress from './components/Progress.vue'
+import FormAddress from './components/FormAddress.vue'
 
 export default {
   name: 'App',
@@ -24,6 +26,7 @@ export default {
     ShopCart,
     Button,
     Progress,
+    FormAddress,
   },
 }
 </script>

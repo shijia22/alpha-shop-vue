@@ -39,6 +39,10 @@ body {
   display: flex;
 }
 
+.grid {
+  display: grid;
+}
+
 /* flex、alignment 與 cursor */
 .flex-column {
   flex-direction: column;
@@ -75,6 +79,9 @@ body {
 }
 .align-items-center {
   align-items: center;
+}
+.items-stretch {
+  align-items: stretch;
 }
 .text-center {
   text-align: center;
@@ -132,6 +139,15 @@ body {
   padding-top: 1.5rem;
 }
 
+.pl-4 {
+  padding-left: 1rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
 /* bord-bottom*/
 .line {
   height: 1px;
@@ -146,4 +162,58 @@ body {
   border: 1px solid $gray;
   border-radius: 24px;
   color: $gray;
+}
+
+/* FormAddress */
+
+.form-container {
+  width: 100%;
+  margin-bottom: 3rem;
+  display: grid;
+  grid-row-gap: 1.5rem;
+  grid-auto-rows: minmax(4rem, auto);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-column-gap: 1.875rem;
+}
+
+select {
+  color: #999999;
+}
+select option {
+  color: black;
+}
+
+label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+  color: #808080;
+}
+
+.form-half {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 1.875rem;
+}
+
+/* Form */
+.form-type {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.input-border {
+  border: 1px solid $light-gray;
+  border-radius: 4px;
+}
+
+::-webkit-input-placeholder {
+  /* Chrome, Safari */
+  color: #999999;
 }
