@@ -5,8 +5,7 @@
       <div class="form-row">
         <div class="form-type">
           <label for="gender">稱謂</label>
-          <select name="gender" class="py-3 input-border">
-            <option value="">--Please choose--</option>
+          <select name="gender" class="py-3 pl-4 input-border">
             <option value="mr">先生</option>
             <option value="ms">女士</option>
           </select>
@@ -29,7 +28,7 @@
       <div class="form-row">
         <div class="form-type">
           <label for="city">縣市</label>
-          <select name="city" class="py-3 input-border">
+          <select name="city" class="py-3 pl-4 input-border">
             <option value="">請選擇縣市</option>
             <option value="TPE">臺北市</option>
             <option value="TPH">新北市</option>

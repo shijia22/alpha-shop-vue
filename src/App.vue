@@ -38,14 +38,16 @@ body {
 .app {
   max-width: 1440px;
   margin: 0 auto;
+  padding: 0 10rem;
   position: relative;
 }
 
 .left {
+  margin-right: 8.125rem;
   flex-grow: 1;
 }
 
 .right {
-  width: 50%;
+  width: 40%;
 }
 </style>
