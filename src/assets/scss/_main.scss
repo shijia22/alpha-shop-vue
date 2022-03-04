@@ -47,6 +47,10 @@ body {
 .flex-column {
   flex-direction: column;
 }
+
+.flex-grow {
+  flex-grow: 1;
+}
 .justify-content-start {
   justify-content: flex-start;
 }
@@ -117,6 +121,10 @@ body {
   margin-bottom: 4rem;
 }
 
+.mb-36 {
+  margin-bottom: 9rem;
+}
+
 .mt-4 {
   margin-top: 1rem;
 }
@@ -127,6 +135,10 @@ body {
 
 .mr-2 {
   margin-right: 0.5rem;
+}
+
+.mr-5 {
+  margin-right: 1.25rem;
 }
 
 .my-4 {
@@ -216,4 +228,57 @@ label {
 ::-webkit-input-placeholder {
   /* Chrome, Safari */
   color: #999999;
+}
+
+.radio-container {
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  border: 1px solid $simple-gray;
+  border-radius: 4px;
+  &:focus,
+  &:hover {
+    border: 1px solid $bg-color;
+  }
+}
+
+.deliver-title {
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.deliver-price {
+  font-size: 12px;
+  line-height: 16px;
+  color: #000000;
+}
+
+.radio-input {
+  width: 20px;
+  height: 20px;
+  opacity: 1;
+}
+
+input[type='radio']:after {
+  width: 20px;
+  height: 20px;
+  content: '';
+  border-radius: 20px;
+  display: inline-block;
+  visibility: visible;
+  background: #ffffff;
+  border: 1px solid #222222;
+}
+
+input[type='radio']:checked:after,
+input[type='radio']:hover:after {
+  width: 8px;
+  height: 8px;
+  background-color: #ffffff;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 6px solid $bg-color;
 }
