@@ -10,9 +10,11 @@
       <div class="item-center">
         <span>{{ productItem.title }}</span>
         <div class="d-flex justify-content-between mt-4">
-          <button class="set-num minus">-</button>
-          <span class="set-qty">1</span>
-          <button class="set-num add">+</button>
+          <button class="set-num minus" @click="minusItem(productItem)">
+            -
+          </button>
+          <span class="set-qty">{{ productItem.qty }}</span>
+          <button class="set-num add" @click="plusItem(productItem)">+</button>
         </div>
       </div>
       <div class="item-left">$ {{ productItem.price }}</div>
@@ -23,7 +25,7 @@
     </div>
     <div class="my-4 d-flex justify-content-between">
       <span>小計</span>
-      <span>$2000</span>
+      <span>${{ outputTotal() }}</span>
     </div>
   </div>
 </template>
@@ -38,14 +40,33 @@ export default {
           title: '破壞補丁修身牛仔褲',
           src: 'https://i.ibb.co/SsdJMh6/Block2x.png',
           price: '3999',
+          qty: 1,
         },
         {
           title: '刷色直筒牛仔褲',
           src: 'https://i.ibb.co/fnyhVZJ/Block2px.png',
           price: '1299',
+          qty: 1,
         },
       ],
+      total: 0,
+      deliver: '',
     }
+  },
+  methods: {
+    plusItem(productItem) {
+      productItem.qty++
+    },
+    minusItem(productItem) {
+      if (productItem.qty >= 1) {
+        productItem.qty--
+      }
+    },
+    outputTotal() {
+      return this.total =
+        this.productItems[0].price * this.productItems[0].qty +
+        this.productItems[1].price * this.productItems[1].qty
+    },
   },
 }
 </script>
