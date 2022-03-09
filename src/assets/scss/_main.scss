@@ -162,15 +162,16 @@ body {
 
 /* bord-bottom*/
 .line {
-  height: 1px;
+  height: 2px;
   width: 60px;
-  background-color: #000;
+  background-color: $gray;
 }
 
 /* circle */
 .circle {
   height: 24px;
   width: 24px;
+  padding: 4px;
   border: 1px solid $gray;
   border-radius: 24px;
   color: $gray;

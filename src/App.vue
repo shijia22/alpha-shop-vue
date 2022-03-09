@@ -3,7 +3,7 @@
     <h1 class="mb-12">結帳</h1>
     <div class="d-flex">
       <div class="left">
-        <Progress />
+        <Progress :page="page"/>
         <component :is="componentViews[page]" />
         <Button @next-step="nextStep" @back-step="backStep" :page="page"/>
       </div>
