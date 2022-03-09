@@ -1,18 +1,49 @@
 <template>
   <div class="btn-container pt-6 d-flex justify-content-between">
-    <button class="back d-flex align-items-center">
-      <img src="/images/left.png" alt="">
+    <button
+      class="back d-flex align-items-center"
+      :class="{ show: backShow() }"
+      @click="backClick"
+    >
+      <img src="/images/left.png" alt="" />
       上一步
     </button>
-    <button class="next d-flex align-items-center">下一步
-      <img src="/images/right.png" alt="">
+    <button
+      v-if="this.page <= 1"
+      class="next d-flex align-items-center"
+      @click="nextClick"
+    >
+      下一步
+      <img src="/images/right.png" alt="" />
     </button>
+    <button v-else class="next d-flex align-items-center">確認訂單</button>
   </div>
 </template>
 
 <script>
 export default {
   name: 'Button',
+  data() {
+    return {
+      btnIsShow: true,
+    }
+  },
+  props: {
+    page: {
+      type: Number,
+    },
+  },
+  methods: {
+    nextClick() {
+      this.$emit('next-step')
+    },
+    backClick() {
+      this.$emit('back-step')
+    },
+    backShow() {
+      return this.page >= 1 ? true : false
+    },
+  },
 }
 </script>
 
@@ -27,11 +58,16 @@ export default {
     height: 1.5rem;
     margin-left: 0.75rem;
   }
+  visibility: hidden;
+}
+
+.show {
+  visibility: visible;
 }
 
 .next {
   padding: 11px 48.5px;
-  color: #FFFFFF;
+  color: #ffffff;
   border-radius: 8px;
   background: $btn-color;
   img {

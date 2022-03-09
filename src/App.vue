@@ -4,8 +4,8 @@
     <div class="d-flex">
       <div class="left">
         <Progress />
-        <FormAddress />
-        <Button />
+        <component :is="componentViews[page]" />
+        <Button @next-step="nextStep" @back-step="backStep" :page="page"/>
       </div>
       <div class="right">
         <ShopCart />
@@ -19,14 +19,36 @@ import ShopCart from './components/ShopCart.vue'
 import Button from './components/Button.vue'
 import Progress from './components/Progress.vue'
 import FormAddress from './components/FormAddress.vue'
+import FormDeliver from './components/FormDeliver.vue'
+import FormCheckout from './components/FormCheckout.vue'
 
 export default {
   name: 'App',
+  data() {
+    return {
+      page: 0,
+      componentViews: ['FormAddress', 'FormDeliver', 'FormCheckout'],
+    }
+  },
   components: {
     ShopCart,
     Button,
     Progress,
     FormAddress,
+    FormDeliver,
+    FormCheckout,
+  },
+  methods: {
+    nextStep() {
+      if (this.page < 2) {
+        this.page++
+      }
+    },
+    backStep() {
+      if (this.page > 0) {
+        this.page--
+      }
+    }
   },
 }
 </script>
