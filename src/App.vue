@@ -17,7 +17,7 @@
         </div>
       </div>
     </div>
-    <Footer />
+    <Footer class="footer-outside"/>
   </div>
 </template>
 

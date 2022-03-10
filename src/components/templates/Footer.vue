@@ -1,5 +1,6 @@
 <template>
-  <div class="footer d-flex align-items-center">
+  <div class="footer-block">
+    <div class="footer d-flex align-items-center justify-content-between">
     <img
       src="https://i.ibb.co/c654J5R/Logo2px.png"
       alt="footer-logo"
@@ -22,6 +23,7 @@
           class="icon"
         />
       </div>
+    </div>
     </div>
   </div>
 </template>
@@ -73,8 +75,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.footer-block {
+  width: 100%;
+}
+
 .footer {
-  max-width: 1440px;
   margin-top: 7.5rem;
   padding: 4rem 10rem;
   background-color: #f6f7f8;
