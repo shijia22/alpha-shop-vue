@@ -1,5 +1,6 @@
 <template>
   <div class="app">
+    <Header />
     <h1 class="mb-12">結帳</h1>
     <div class="d-flex">
       <div class="left">
@@ -15,6 +16,7 @@
 </template>
 
 <script>
+import Header from "./components/templates/Header.vue";
 import ShopCart from './components/ShopCart.vue'
 import Button from './components/Button.vue'
 import Progress from './components/Progress.vue'
@@ -32,6 +34,7 @@ export default {
     }
   },
   components: {
+    Header,
     ShopCart,
     Button,
     Progress,
