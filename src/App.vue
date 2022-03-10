@@ -4,11 +4,11 @@
     <div class="d-flex">
       <div class="left">
         <Progress :page="page"/>
-        <component :is="componentViews[page]" />
+        <component :is="componentViews[page]" @delivery-select="deliverySelect"/>
         <Button @next-step="nextStep" @back-step="backStep" :page="page"/>
       </div>
       <div class="right">
-        <ShopCart />
+        <ShopCart :deliveryValue="deliveryValue"/>
       </div>
     </div>
   </div>
@@ -28,6 +28,7 @@ export default {
     return {
       page: 0,
       componentViews: ['FormAddress', 'FormDeliver', 'FormCheckout'],
+      deliveryValue: 0,
     }
   },
   components: {
@@ -48,6 +49,9 @@ export default {
       if (this.page > 0) {
         this.page--
       }
+    },
+    deliverySelect(value) {
+      this.deliveryValue = Number(value);
     }
   },
 }

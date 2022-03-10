@@ -21,7 +21,7 @@
     </div>
     <div class="item-deliver my-4 d-flex justify-content-between">
       <span>運費</span>
-      <span>免費</span>
+      <span>{{ this.deliveryValue === 0 ? '免費' : '$500'}}</span>
     </div>
     <div class="my-4 d-flex justify-content-between">
       <span>小計</span>
@@ -53,6 +53,11 @@ export default {
       deliver: '',
     }
   },
+  props: {
+    deliveryValue: {
+      type: Number,
+    },
+  },
   methods: {
     plusItem(productItem) {
       productItem.qty++
@@ -65,7 +70,8 @@ export default {
     outputTotal() {
       return this.total =
         this.productItems[0].price * this.productItems[0].qty +
-        this.productItems[1].price * this.productItems[1].qty
+        this.productItems[1].price * this.productItems[1].qty +
+        this.deliveryValue
     },
   },
 }
@@ -95,5 +101,9 @@ button {
   height: 25px;
   border-radius: 25px;
   background-color: $simple-gray;
+}
+
+.item-center {
+  width: 145px;
 }
 </style>

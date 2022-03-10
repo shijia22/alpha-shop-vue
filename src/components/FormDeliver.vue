@@ -9,8 +9,9 @@
       >
         <input
           type="radio"
-          name="contact"
-          value="email"
+          :value="deliverItem.value"
+          v-model="deliverySelect"
+          @change="selectDelivery"
           class="mr-5 radio-input"
         />
         <div class="flex-grow">
@@ -35,14 +36,22 @@ export default {
           title: '標準運送',
           days: '約 3~7 個工作天',
           price: '免費',
+          value: '0',
         },
         {
           title: 'DHL 貨運',
           days: '48 小時內送達',
           price: `$${500}`,
+          value: '500',
         },
       ],
+      deliverySelect: '',
     }
+  },
+  methods: {
+    selectDelivery() {
+      this.$emit('delivery-select', this.deliverySelect)
+    },
   },
 }
 </script>
