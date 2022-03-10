@@ -1,22 +1,29 @@
 <template>
-  <div class="app">
-    <Header />
-    <h1 class="mb-12">結帳</h1>
-    <div class="d-flex">
-      <div class="left">
-        <Progress :page="page"/>
-        <component :is="componentViews[page]" @delivery-select="deliverySelect"/>
-        <Button @next-step="nextStep" @back-step="backStep" :page="page"/>
-      </div>
-      <div class="right">
-        <ShopCart :deliveryValue="deliveryValue"/>
+  <div>
+    <div class="app">
+      <Header />
+      <h1 class="mb-12">結帳</h1>
+      <div class="d-flex">
+        <div class="left">
+          <Progress :page="page" />
+          <component
+            :is="componentViews[page]"
+            @delivery-select="deliverySelect"
+          />
+          <Button @next-step="nextStep" @back-step="backStep" :page="page" />
+        </div>
+        <div class="right">
+          <ShopCart :deliveryValue="deliveryValue" />
+        </div>
       </div>
     </div>
+    <Footer />
   </div>
 </template>
 
 <script>
-import Header from "./components/templates/Header.vue";
+import Header from './components/templates/Header.vue'
+import Footer from './components/templates/Footer.vue'
 import ShopCart from './components/ShopCart.vue'
 import Button from './components/Button.vue'
 import Progress from './components/Progress.vue'
@@ -35,6 +42,7 @@ export default {
   },
   components: {
     Header,
+    Footer,
     ShopCart,
     Button,
     Progress,
@@ -54,8 +62,8 @@ export default {
       }
     },
     deliverySelect(value) {
-      this.deliveryValue = Number(value);
-    }
+      this.deliveryValue = Number(value)
+    },
   },
 }
 </script>
