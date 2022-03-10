@@ -12,6 +12,7 @@
           :value="deliverItem.value"
           v-model="deliverySelect"
           @change="selectDelivery"
+          :checked="deliverySelect"
           class="mr-5 radio-input"
         />
         <div class="flex-grow">
@@ -45,7 +46,7 @@ export default {
           value: '500',
         },
       ],
-      deliverySelect: '',
+      deliverySelect: '0',
     }
   },
   methods: {
