@@ -43,6 +43,10 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
+### FeedBack 
+
+- by @kevinshu1995 [doclink](https://hackmd.io/QcFVpvirStqxoCGFhr4tSA?view)
+
 ### 參考資料
 1. [Switching out components in vue on a click event](https://stackoverflow.com/questions/66086887/vue-change-components-on-click)
 2. [VUE change components on click](https://stackoverflow.com/questions/66086887/vue-change-components-on-click)
