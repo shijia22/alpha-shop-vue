@@ -7,7 +7,6 @@
           <label for="cc-name">持卡人姓名</label>
           <input
             type="text"
-            value="cc-name"
             placeholder="John Doe"
             class="py-3 pl-4 input-border"
           />
@@ -17,8 +16,7 @@
         <div class="form-type">
           <label for="cc-number">卡號</label>
           <input
-            type="number"
-            value="cc-number"
+            type="text"
             placeholder="1111 2222 3333 4444"
             class="py-3 pl-4 input-border"
           />
@@ -28,15 +26,14 @@
         <div class="form-type">
           <label for="cc-exp">有效期限</label>
           <input
-            type="number"
-            value="cc-exp"
+            type="text"
             placeholder="MM/YY"
             class="py-3 pl-4 input-border"
           />
         </div>
         <div class="form-type">
           <label for="cc-csc">CVC/CCV</label>
-          <input type="number" value="cc-csc" placeholder="123" class="py-3 pl-4 input-border" />
+          <input type="text" placeholder="123" class="py-3 pl-4 input-border" />
         </div>
       </div>
     </form>
