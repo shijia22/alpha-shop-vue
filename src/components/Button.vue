@@ -2,21 +2,21 @@
   <div class="btn-container pt-6 d-flex justify-content-between">
     <button
       class="back d-flex align-items-center"
-      :class="{ show: backShow() }"
+      :class="{ show: backShow }"
       @click="backClick"
     >
       <img src="/images/left.png" alt="" />
       上一步
     </button>
     <button
-      v-if="this.page <= 1"
+      v-show="this.page <= 1"
       class="next d-flex align-items-center"
       @click="nextClick"
     >
       下一步
       <img src="/images/right.png" alt="" />
     </button>
-    <button v-else class="next d-flex align-items-center">確認訂單</button>
+    <button v-show="this.page === 2" class="next d-flex align-items-center">確認訂單</button>
   </div>
 </template>
 
@@ -40,6 +40,8 @@ export default {
     backClick() {
       this.$emit('back-step')
     },
+  },
+  computed: {
     backShow() {
       return this.page >= 1
     },
