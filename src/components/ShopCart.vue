@@ -21,11 +21,11 @@
     </div>
     <div class="item-deliver my-4 d-flex justify-content-between">
       <span>運費</span>
-      <span>{{ this.deliveryValue === 0 ? '免費' : '$500'}}</span>
+      <span>{{ this.deliveryValue === 0 ? '免費' : '$500' }}</span>
     </div>
     <div class="my-4 d-flex justify-content-between">
       <span>小計</span>
-      <span>${{ outputTotal() }}</span>
+      <span>${{ outputTotal }}</span>
     </div>
   </div>
 </template>
@@ -67,11 +67,15 @@ export default {
         productItem.qty--
       }
     },
+  },
+  computed: {
     outputTotal() {
-      return this.total =
+      let totalCount = 0
+      totalCount =
         this.productItems[0].price * this.productItems[0].qty +
         this.productItems[1].price * this.productItems[1].qty +
         this.deliveryValue
+        return totalCount
     },
   },
 }

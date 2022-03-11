@@ -46,3 +46,4 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ### 參考資料
 1. [Switching out components in vue on a click event](https://stackoverflow.com/questions/66086887/vue-change-components-on-click)
 2. [VUE change components on click](https://stackoverflow.com/questions/66086887/vue-change-components-on-click)
+3. 轉寫 `computed` 需要注意不能覆蓋原本的值，錯誤 [side-effects-in-computed-properties](https://stackoverflow.com/questions/56160641/side-effects-in-computed-properties)
