@@ -10,7 +10,7 @@
             :is="componentViews[page]"
             @delivery-select="deliverySelect"
           />
-          <Button @next-step="nextStep" @back-step="backStep" :page="page" />
+          <Stepper @next-step="nextStep" @back-step="backStep" :page="page" />
         </div>
         <div class="right">
           <ShopCart :deliveryValue="deliveryValue" />
@@ -25,7 +25,7 @@
 import Header from './components/templates/Header.vue'
 import Footer from './components/templates/Footer.vue'
 import ShopCart from './components/ShopCart.vue'
-import Button from './components/Button.vue'
+import Stepper from './components/Stepper.vue'
 import Progress from './components/Progress.vue'
 import FormAddress from './components/FormAddress.vue'
 import FormDeliver from './components/FormDeliver.vue'
@@ -44,7 +44,7 @@ export default {
     Header,
     Footer,
     ShopCart,
-    Button,
+    Stepper,
     Progress,
     FormAddress,
     FormDeliver,
