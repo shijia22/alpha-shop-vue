@@ -31,11 +31,6 @@ export default {
       type: Number,
     },
   },
-  methods: {
-    circleDone() {
-      return this.page >= 1 ? true : false
-    },
-  },
 }
 </script>
 
