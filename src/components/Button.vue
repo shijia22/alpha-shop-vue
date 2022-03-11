@@ -41,7 +41,7 @@ export default {
       this.$emit('back-step')
     },
     backShow() {
-      return this.page >= 1 ? true : false
+      return this.page >= 1
     },
   },
 }
