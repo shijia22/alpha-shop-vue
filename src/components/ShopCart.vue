@@ -3,8 +3,8 @@
     <h2 class="mb-8">購物籃</h2>
     <div
       class="item mb-8 d-flex justify-content-between"
-      v-for="(productItem, i) in productItems"
-      :key="`item-${i}`"
+      v-for="(productItem) in productItems"
+      :key="`item-${productItem.id}`"
     >
       <img :src="productItem.src" alt="" />
       <div class="item-center">
@@ -37,12 +37,14 @@ export default {
     return {
       productItems: [
         {
+          id: 1,
           title: '破壞補丁修身牛仔褲',
           src: 'https://i.ibb.co/SsdJMh6/Block2x.png',
           price: '3999',
           qty: 1,
         },
         {
+          id: 2,
           title: '刷色直筒牛仔褲',
           src: 'https://i.ibb.co/fnyhVZJ/Block2px.png',
           price: '1299',

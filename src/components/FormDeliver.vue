@@ -4,8 +4,8 @@
     <form class="mb-36" @change="selectDelivery">
       <div
         class="radio-container"
-        v-for="(deliverItem, i) in deliverItems"
-        :key="`item-${i}`"
+        v-for="(deliverItem) in deliverItems"
+        :key="`item-${deliverItem.id}`"
       >
         <input
           type="radio"
@@ -33,12 +33,14 @@ export default {
     return {
       deliverItems: [
         {
+          id: 1,
           title: '標準運送',
           days: '約 3~7 個工作天',
           price: '免費',
           value: '0',
         },
         {
+          id: 2,
           title: 'DHL 貨運',
           days: '48 小時內送達',
           price: `$${500}`,
