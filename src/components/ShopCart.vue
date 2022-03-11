@@ -58,6 +58,7 @@ export default {
   props: {
     deliveryValue: {
       type: Number,
+      default: 0
     },
   },
   methods: {
