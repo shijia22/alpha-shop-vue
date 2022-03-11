@@ -3,7 +3,7 @@
     <h2 class="mb-8">購物籃</h2>
     <div
       class="item mb-8 d-flex justify-content-between"
-      v-for="(productItem) in productItems"
+      v-for="productItem in productItems"
       :key="`item-${productItem.id}`"
     >
       <img :src="productItem.src" alt="" />
@@ -62,12 +62,16 @@ export default {
   },
   methods: {
     plusItem(productItem) {
-      productItem.qty++
+      this.productItems.forEach((item) => {
+        if (item.id === productItem.id) item.qty += 1
+      })
     },
     minusItem(productItem) {
-      if (productItem.qty >= 1) {
-        productItem.qty--
-      }
+      this.productItems.forEach((item) => {
+        if (item.id === productItem.id && item.qty >= 1) {
+          item.qty -= 1
+        }
+      })
     },
   },
   computed: {
@@ -77,7 +81,7 @@ export default {
         this.productItems[0].price * this.productItems[0].qty +
         this.productItems[1].price * this.productItems[1].qty +
         this.deliveryValue
-        return totalCount
+      return totalCount
     },
   },
 }
