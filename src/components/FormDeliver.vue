@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2 class="mb-8">運送方式</h2>
-    <div class="mb-36">
+    <form class="mb-36" @change="selectDelivery">
       <div
         class="radio-container"
         v-for="(deliverItem, i) in deliverItems"
@@ -11,7 +11,6 @@
           type="radio"
           :value="deliverItem.value"
           v-model="deliverySelect"
-          @change="selectDelivery"
           :checked="deliverySelect"
           class="mr-5 radio-input"
         />
@@ -23,7 +22,7 @@
           <span class="deliver-price">{{ deliverItem.days }}</span>
         </div>
       </div>
-    </div>
+    </form>
   </div>
 </template>
 
