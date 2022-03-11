@@ -77,10 +77,13 @@ export default {
   computed: {
     outputTotal() {
       let totalCount = 0
-      totalCount =
-        this.productItems[0].price * this.productItems[0].qty +
-        this.productItems[1].price * this.productItems[1].qty +
-        this.deliveryValue
+
+      this.productItems.forEach((item) => {
+        totalCount += item.price * item.qty
+         return totalCount
+      })
+
+      totalCount = totalCount + this.deliveryValue
       return totalCount
     },
   },
